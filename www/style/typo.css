@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "akaDora";
+    src: url('./font/akadora/akaDora.ttf');
+}
+
+@font-face {
+    font-family: "Neohellenic";
+    src: url('./font/neohellenic/GFSNeohellenic.ttf');
+}
+
+@font-face {
+    font-family: "GothamBold";
+    src: url('./font/gotham/bold.otf');
+}
+
+@font-face {
+    font-family: "GothamBook";
+    src: url('./font/gotham/book.otf');
+}

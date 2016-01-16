@@ -1,17 +1,27 @@
 {block content}
-<div id="banner">
-    <h1>Jedeš.cz ...tvůj volný čas</h1>
+<div style="margin-top:100px;">
+    <div class="event-list-cat">
+        <h2>Jedeš.cz ...tvůj volný čas</h2>
+    </div>
 </div>
 
-<div id="content">
-    <div class="well">
+<div class="cont-paper">
+    <p>
         Jedeš.cz je otevřená databáze událostí, v níž může každý uživatel najít
         způsob, jak strávit svůj volný čas.
-    </div>
+    </p>
+    
+    <p>
+        <a n:href="Event:new" class="btn btn-success"><i class="fa fa-plus"></i>&nbsp; Přidat novou událost</a>
+    </p>
 
     <h2><i class="fa fa-calendar"></i>&nbsp; Doporučené události</h2>
 
     <p>
         <i>Nejsou k dispozici žádné události.</i>
     </p>
+</div>
+
+<div>
+    <img src="{$basePath}/style/img/bottom-shadow.png" style="width: 100%;">
 </div>

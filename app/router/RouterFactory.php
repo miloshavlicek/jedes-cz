@@ -16,6 +16,7 @@ class RouterFactory {
 
         $router = new RouteList;
         $router[] = new Route('o-aplikaci', 'About:default', $flag);
+        $router[] = new Route('udalost/vytvorit', 'Event:new', $flag);
         $router[] = new Route('<presenter>/<action>[/<id>]', 'Homepage:default', $flag);
         return $router;
     }
