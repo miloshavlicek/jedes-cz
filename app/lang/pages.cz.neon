@@ -1,0 +1,13 @@
+event:
+    add:
+        title: 'Vytvořit událost'
+        notAvailable: 'V současné době není možné přidávat nové akce.'
+        addNewEvent: 'Přidat novou událost'
+about:
+    title: 'O aplikaci'
+    goal:
+        title: 'Cíl'
+        p: 'Naším cílem je shromáždit informace o všech akcích konaných na území České republiky. Tímto způsobem bychom rádi dali lidem příležitost rozhodnout se, jak nejlépe strávit svůj volný čas.'
+    openDatabase:
+        title: 'Otevřená databáze'
+        p: 'Databázi veřejných akcí poskytujeme k dalšímu použití.'

@@ -4,9 +4,103 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8d1e63df2f0b4472032f6555683baad4",
-    "content-hash": "d6a1692d83ca12d79dedec07c739eada",
+    "hash": "80ffb24134486323986c51d98d7095cb",
+    "content-hash": "5f14032e712b299f3fb08f08ed39be16",
     "packages": [
+        {
+            "name": "kdyby/translation",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kdyby/Translation.git",
+                "reference": "d61f9d899616cb02c57b234eb4174618dcdfbf76"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kdyby/Translation/zipball/d61f9d899616cb02c57b234eb4174618dcdfbf76",
+                "reference": "d61f9d899616cb02c57b234eb4174618dcdfbf76",
+                "shasum": ""
+            },
+            "require": {
+                "latte/latte": "~2.3@dev",
+                "nette/caching": "~2.3@dev",
+                "nette/di": "~2.3@dev",
+                "nette/finder": "~2.3@dev",
+                "nette/http": "~2.3@dev",
+                "nette/neon": "~2.3@dev",
+                "nette/php-generator": "~2.3@dev",
+                "nette/reflection": "~2.3@dev",
+                "nette/utils": "~2.3@dev",
+                "symfony/config": "~2.6",
+                "symfony/translation": "~2.6"
+            },
+            "require-dev": {
+                "latte/latte": "~2.3@dev",
+                "nette/application": "~2.3@dev",
+                "nette/bootstrap": "~2.3@dev",
+                "nette/caching": "~2.3@dev",
+                "nette/component-model": "~2.2@dev",
+                "nette/database": "~2.3@dev",
+                "nette/deprecated": "~2.2@dev",
+                "nette/di": "~2.3@dev",
+                "nette/finder": "~2.3@dev",
+                "nette/forms": "~2.3@dev",
+                "nette/http": "~2.3@dev",
+                "nette/mail": "~2.3@dev",
+                "nette/neon": "~2.3@dev",
+                "nette/php-generator": "~2.3@dev",
+                "nette/reflection": "~2.3@dev",
+                "nette/robot-loader": "~2.3@dev",
+                "nette/safe-stream": "~2.3@dev",
+                "nette/security": "~2.3@dev",
+                "nette/tester": "~1.3@rc",
+                "nette/tokenizer": "~2.2@dev",
+                "nette/utils": "~2.3@dev",
+                "symfony/console": "~2.5",
+                "tracy/tracy": "~2.3@dev"
+            },
+            "suggest": {
+                "kdyby/console": "If you wanna use extract command and much others, install also console.",
+                "symfony/locale": "Locale component provides fallback code to handle cases when the intl extension is missing.",
+                "symfony/yaml": "If you wanna store translations in YAML format - supports multiline strings.",
+                "tracy/tracy": "Diagnostics tool from Nette"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Kdyby\\Translation": "src/"
+                },
+                "classmap": [
+                    "src/Kdyby/Translation/exceptions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Filip Procházka",
+                    "email": "filip@prochazka.su",
+                    "homepage": "http://filip-prochazka.com"
+                }
+            ],
+            "description": "Integration of Symfony/Translation into Nette Framework",
+            "homepage": "http://kdyby.org",
+            "keywords": [
+                "kdyby",
+                "nette",
+                "translation"
+            ],
+            "time": "2015-05-09 17:33:00"
+        },
         {
             "name": "latte/latte",
             "version": "v2.3.8",
@@ -980,6 +1074,228 @@
             "description": "Nette Utility Classes",
             "homepage": "https://nette.org",
             "time": "2015-11-30 00:11:35"
+        },
+        {
+            "name": "symfony/config",
+            "version": "v2.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/config.git",
+                "reference": "41ee6c70758f40fa1dbf90d019ae0a66c4a09e74"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/config/zipball/41ee6c70758f40fa1dbf90d019ae0a66c4a09e74",
+                "reference": "41ee6c70758f40fa1dbf90d019ae0a66c4a09e74",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9",
+                "symfony/filesystem": "~2.3|~3.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Config\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Config Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-01-03 15:33:41"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "v3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "c2e59d11dccd135dc8f00ee97f34fe1de842e70c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/c2e59d11dccd135dc8f00ee97f34fe1de842e70c",
+                "reference": "c2e59d11dccd135dc8f00ee97f34fe1de842e70c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "https://symfony.com",
+            "time": "2015-12-22 10:39:06"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "49ff736bd5d41f45240cec77b44967d76e0c3d25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/49ff736bd5d41f45240cec77b44967d76e0c3d25",
+                "reference": "49ff736bd5d41f45240cec77b44967d76e0c3d25",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2015-11-20 09:19:13"
+        },
+        {
+            "name": "symfony/translation",
+            "version": "v2.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/translation.git",
+                "reference": "bc0b666903944858f4ffec01c4e50c63e5c276c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/bc0b666903944858f4ffec01c4e50c63e5c276c0",
+                "reference": "bc0b666903944858f4ffec01c4e50c63e5c276c0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "symfony/config": "<2.7"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "~2.8",
+                "symfony/intl": "~2.4|~3.0.0",
+                "symfony/yaml": "~2.2|~3.0.0"
+            },
+            "suggest": {
+                "psr/log": "To use logging capability in translator",
+                "symfony/config": "",
+                "symfony/yaml": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Translation\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Translation Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-01-03 15:33:41"
         },
         {
             "name": "tracy/tracy",

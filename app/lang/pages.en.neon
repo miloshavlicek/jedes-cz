@@ -1,0 +1,13 @@
+event:
+    add:
+        title: 'Create Event'
+        notAvailable: 'It is not possible to add new events at this time.'
+        addNewEvent: 'Add new event'
+about:
+    title: 'About app'
+    goal:
+        title: 'Goal'
+        p: 'Our goal is to collect information about all events held in the Czech Republic. In this way, we would like to give people the opportunity to decide how to best spend their leisure.'
+    openDatabase:
+        title: 'Open database'
+        p: 'We provide our public events database for further use.'

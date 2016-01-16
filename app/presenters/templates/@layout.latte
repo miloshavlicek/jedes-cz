@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <meta name="description" content="Jedeš.cz nabízí svým uživatelům stovky různých příležitostí a návrhů, jak strávit volný čas. Díky jedinečnému propojení se sociálními sítěmi dostává plánování volného času zcela nový rozměr! - www.jedes.cz" />
-        <meta name="keywords" content="akce,zábava,události" />
+        <meta name="description" content="{_general.description} - jedes.cz" />
+        <meta name="keywords" content="{_general.keywords}" />
         <meta property="og:image" content="http://old.jedes.cz/img/square.png" />
-        <title>{ifset title}{include title|striptags|trim} | {/ifset}Jedeš.cz{ifset title}{else} ...tvůj volný čas{/ifset}</title>
+        <title>{ifset title}{include title|striptags|trim} | {/ifset}{_general.title}{ifset title}{else} {_general.motto}{/ifset}</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -15,64 +15,16 @@
         <link rel="shortcut icon" href="{$basePath}/favicon.ico">
     </head>
     <body>
-        <noscript><iframe src="//www.googletagmanager.com/ns.html?id={$gtmId}"
-                          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <script n:syntax="double">(function (w, d, s, l, i) {
-                w[l] = w[l] || [];
-                w[l].push({'gtm.start':
-                            new Date().getTime(), event: 'gtm.js'});
-                var f = d.getElementsByTagName(s)[0],
-                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-                j.async = true;
-                j.src =
-                        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-                f.parentNode.insertBefore(j, f);
-            }
-            )(window, document, 'script', 'dataLayer', {{$gtmId}});</script>
-        <div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
-
-        <div id="header">
-            <a n:href="Homepage:">
-                <img src="{$basePath}/style/img/logo-slim.png" id="logo"/>
-            </a>
-            <div id="header-back" onClick="window.location.href = '{$basePath}';">
-                <h1><a n:href="Homepage:">Jedeš.cz</a></h1>
-                <h2>...tvůj volný čas</h2>
-            </div>
-            <div id="header-fb">
-                <a href="https://www.facebook.com/pages/Jede%C5%A1cz/218988338142124" target="_blank">Facebook</a>
-            </div>
-            <div id="header-create-event" onClick="window.location.href = 'http://old.jedes.cz/event/new/'">
-                <a href="http://old.jedes.cz/event/new/">Přidat akci</a>
-            </div>
-            <div id="head-menu">
-                <ul>
-                    <a n:href="Event:new">
-                        <li>
-                            Vytvořit událost
-                        </li>
-                    </a>
-                    <a href="https://www.facebook.com/jedes.cz" target="_blank">
-                        <li>
-                            Facebook stránka &nbsp;<sup><i class="fa fa-external-link"></i></sup>
-                        </li>
-                    </a>
-                    <a n:href="About:">
-                        <li>
-                            O aplikaci
-                        </li>
-                    </a>
-                </ul>
-                <div id="head-menu-copy">Jedeš.cz  ...tvůj volný čas</div>
-            </div>
-        </div>
+        {include './_part/GTM.latte'}
+        {include './_part/flashMessages.latte'}
+        {include './_part/header.latte'}
 
         <div class="container">
             {include content}
         </div>
 
         <div id="footer">
-            <a n:href="About:">Jedeš.cz</a> ...tvůj volný čas
+            <a n:href="About:">{_general.title}</a> {_general.motto}
         </div>
 
         <a n:if="$presenter->isLinkCurrent('Homepage:')" href="https://github.com/miloshavlicek/jedes-cz">
