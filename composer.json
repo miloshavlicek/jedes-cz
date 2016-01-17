@@ -20,7 +20,8 @@
         "nette/utils": "^2.3",
         "latte/latte": "^2.3",
         "tracy/tracy": "^2.3",
-        "kdyby/translation": ">=2.2"
+        "kdyby/translation": ">=2.2",
+        "kdyby/doctrine": ">=3.0"
     },
     "require-dev": {
         "nette/tester": "^1.6"

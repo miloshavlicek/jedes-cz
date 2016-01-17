@@ -14,6 +14,10 @@ application:
 		*: App\*Module\Presenters\*Presenter
 
 extensions:
+    console: Kdyby\Console\DI\ConsoleExtension
+    events: Kdyby\Events\DI\EventsExtension
+    annotations: Kdyby\Annotations\DI\AnnotationsExtension
+    doctrine: Kdyby\Doctrine\DI\OrmExtension
     translation: Kdyby\Translation\DI\TranslationExtension
 
 session:
@@ -25,3 +29,7 @@ services:
 translation:
     default: cz
     fallback: [en, cz]
+
+doctrine:
+    metadata:
+        App: %appDir%/model
