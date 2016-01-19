@@ -11,3 +11,7 @@ about:
     openDatabase:
         title: 'Open database'
         p: 'We provide our public events database for further use.'
+places:
+    title: 'Places'
+    cities:
+        title: 'Cities'

@@ -4,9 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "aa65e4d34c832e3f183b712078d74232",
-    "content-hash": "0a2bd6f4ebb2d5e9be81ff7bb6e3fabd",
+    "hash": "4018c6cced2d3b8adcbad273cfba83ab",
+    "content-hash": "405877660c7ac5bf15145f53e424de48",
     "packages": [
+        {
+            "name": "cothema/eu-cookies",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cothema/eu-cookies.git",
+                "reference": "038a8b3e3add09ba940453485ea6b11ce049065b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cothema/eu-cookies/zipball/038a8b3e3add09ba940453485ea6b11ce049065b",
+                "reference": "038a8b3e3add09ba940453485ea6b11ce049065b",
+                "shasum": ""
+            },
+            "require": {
+                "kdyby/translation": ">=2.2@dev",
+                "latte/latte": ">=2.3.0",
+                "nette/application": ">=2.3.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "nette/tester": ">=1.4"
+            },
+            "type": "project",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "description": "Cothema: EU Cookies",
+            "time": "2016-01-18 07:17:07"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.7",
@@ -2494,7 +2533,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "cothema/eu-cookies": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

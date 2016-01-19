@@ -21,7 +21,8 @@
         "latte/latte": "^2.3",
         "tracy/tracy": "^2.3",
         "kdyby/translation": ">=2.2",
-        "kdyby/doctrine": ">=3.0"
+        "kdyby/doctrine": ">=3.0",
+        "cothema/eu-cookies": "dev-master"
     },
     "require-dev": {
         "nette/tester": "^1.6"

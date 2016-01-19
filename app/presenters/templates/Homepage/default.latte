@@ -9,17 +9,54 @@
     <p>
         {_general.appIs}
     </p>
-    
+
     <p>
         <a n:href="Event:add" class="btn btn-success"><i class="fa fa-plus"></i>&nbsp; {_pages.event.add.addNewEvent}</a>
     </p>
+</div>
 
-    <h2><i class="fa fa-calendar"></i>&nbsp; {_general.recommendedEvents}</h2>
+<div class="event-list-cat" id="event-list-cat-new">
+    <h2>{_general.recommendedEvents}</h2>
+</div>
 
+<div n:if="!count($recommendedEvents)" class="cont-paper">
     <p>
         <i>{_general.noEventsAvailable}</i>
     </p>
 </div>
+
+<table id="events-list" style="width:100%">
+    <tr n:foreach="$recommendedEvents as $recommendedEvent">
+        <td width="30">
+            &nbsp;
+        </td>
+        <td width="80" onClick="window.location.href = '#';">
+            <b>{$recommendedEvent->start|date:'j.n.Y'}</b>
+        </td>
+        <td width="60" onClick="window.location.href = '#';" class="line-time  line-time-evening ">
+            {$recommendedEvent->start|date:'H:i'}
+        </td>
+        <td width="100" onClick="window.location.href = '#';" class="line-geo">
+            {if $recommendedEvent->placeCity}
+                {$recommendedEvent->placeCity->name}
+            {/if}
+        </td>
+        <td width="410" style="text-align:left;" onClick="window.location.href = '#';" class="line-text">
+            <div class="line-label" n:if="$recommendedEvent->tags" n:foreach="explode(',', $recommendedEvent->tags) as $tag" style="background-color:#006600;">{$tag|trim|firstUpper}</div>
+            <a href="#">{$recommendedEvent->title|firstUpper}</a>
+        </td>
+        <td width="195" onClick="window.location.href = '#';" class="line-info">
+            {if $recommendedEvent->placeName}
+                {$recommendedEvent->placeName|trim|firstUpper}
+            {else}
+                {$recommendedEvent->intro|trim|firstUpper|truncate:60}
+            {/if}
+        </td>
+        <td width="20">
+            <a n:if="$recommendedEvent->fb" href="https://www.facebook.com/events/{$recommendedEvent->fb}/"><img src="http://old.jedes.cz/style/img/fb-ico.png"></a>
+        </td>
+    </tr>
+</table>
 
 <div>
     <img src="{$basePath}/style/img/bottom-shadow.png" style="width: 100%;">

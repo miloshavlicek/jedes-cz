@@ -29,6 +29,8 @@ services:
 translation:
     default: cz
     fallback: [en, cz]
+    dirs:
+        - %appDir%/../vendor/cothema/eu-cookies/lang/
 
 doctrine:
     metadata:

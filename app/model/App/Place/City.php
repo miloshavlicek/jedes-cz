@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Place;
+namespace App\Model\Place;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
+ * @ORM\Table(name="place_city")
  */
 class City
 {

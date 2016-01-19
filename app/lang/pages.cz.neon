@@ -11,3 +11,7 @@ about:
     openDatabase:
         title: 'Otevřená databáze'
         p: 'Databázi veřejných akcí poskytujeme k dalšímu použití.'
+places:
+    title: 'Místa'
+    cities:
+        title: 'Města'

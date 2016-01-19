@@ -557,3 +557,19 @@ input,select,textarea {
     background-color: #fff;
     padding: 10px 20px;
 }
+
+.eu-cookies {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    background-color: #222;
+    z-index: 10000;
+    padding: 5px 0;
+    font-size: 12.8px;
+}
+
+.eu-cookies a, .eu-cookies a:hover {
+    color: #428bca;
+}
